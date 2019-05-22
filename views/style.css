@@ -1,0 +1,609 @@
+/* Estilo de https://codepen.io/Momciloo/pen/meZMBm */
+/*----------  libraries ---------- */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*----------  style ----------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #b3e5fc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  width: 611px;
+  min-height: 400px; 
+  margin: 80px auto 0;
+}
+
+.wrapper .container {
+  float: right;
+  width: 600px;
+  min-height: 400px; 
+  background-color: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.wrapper .container .part {
+  float: left;
+  height: 100%;
+}
+
+.wrapper .container .part.article-details {
+  padding: 48px 40px 0;
+  width: 60%;
+}
+
+.wrapper .container .part.result-details {
+  padding: 30px 40px 0;
+  width: 100%;
+}
+
+.wrapper .container .part.article-details h1 {
+  background-color: #00b0ff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 14px 0 10px 49px;
+  letter-spacing: 1px;
+  margin-left: -52px;
+  width: 330px;
+}
+
+.wrapper .container .part.result-details h1 {
+  background-color: #00b0ff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 14px 0 10px 49px;
+  letter-spacing: 1px;
+  margin-left: -52px;
+}
+
+.wrapper .container .part.result-details h2 {
+  background-color: #00b0ff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 14px 0 10px 49px;
+  letter-spacing: 1px;
+  margin-left: -52px;
+  margin-top: 10px;
+  width: 330px;
+}
+
+
+.wrapper .container .part.bg {
+  width: 40%;
+  background-image: url("https://s13.postimg.org/d8emjhccn/image.jpg");
+  background-size: 121%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.wrapper .container form {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.wrapper .container form .group {
+  display: block;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.wrapper .container form .group label {
+  font-size: 12px;
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wrapper .container form .group input {
+  float: left;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  border: 0;
+  color: #263238;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.wrapper .container form .group input::-webkit-input-placeholder {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #d9d9d9;
+  text-align: left;
+}
+
+.wrapper .container form .group input:-moz-placeholder {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #d9d9d9;
+  text-align: left;
+}
+
+.wrapper .container form .group input::-moz-placeholder {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #d9d9d9;
+  text-align: left;
+}
+
+.wrapper .container form .group input:-ms-input-placeholder {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #d9d9d9;
+  text-align: left;
+}
+
+.wrapper .container form .group input:focus {
+  outline: none;
+  border-bottom-color: #00b0ff;
+}
+
+.wrapper .container form .group input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.wrapper .container form .group input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.wrapper .container form .group input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.wrapper .container form .group input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.wrapper .container form .input-cuit {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.wrapper .container form .input-cuit:first-of-type {
+  margin-top: 32px;
+}
+
+.wrapper .container form .input-cuit input {
+  border-bottom: 0;
+}
+
+.wrapper .container form .input-cuit.focused {
+  border-bottom-color: #00b0ff;
+}
+
+.wrapper .container form .submit-group {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.wrapper .container form .submit {
+  text-transform: uppercase;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #263238;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.wrapper .container form .submit:hover {
+  text-decoration: underline;
+}
+
+.wrapper .container form .submit:focus {
+  outline: none;
+}
+
+.wrapper .container form .arrow {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+}
+
+.wrapper .container form .arrow:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-image: url("https://s21.postimg.org/lgxvam5df/arrow.png");
+  position: absolute;
+  top: 4px;
+  left: 0;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.wrapper .container form .arrow.rotate:before {
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.wrapper .container a {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #263238;
+  margin-left: 24px;
+  cursor: pointer;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;  
+  margin: 0em;
+  font: 400 13.3333px Arial;  
+}
+
+.wrapper .container a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .container a.part {
+  padding: 15px;
+}
+
+.credits {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  color: #263238;
+}
+
+.credits a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0px 5px;
+}
+
+
+dl.list {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+}
+
+/* https://codepen.io/davesmiths/pen/ZOeZoW */
+/* Core */
+dl.list:after,
+dl.list:before {
+  content: "";
+  display: table;
+  -webkit-flex: 0;
+  flex: 0;
+}
+
+/* flex:0 used to solve issue where the pseudo elements had flex applied in webkit browsers and therefore were taking up space */
+dl.list:after {
+  clear: both;
+}
+
+dl.list>dt {
+  float: right;
+  clear: both;
+  width: 140px;
+  margin-right: -140px;
+  position: relative;
+  left: -100%;
+}
+
+dl.list>dd {
+  float: left;
+  clear: left;
+  margin-left: 150px;
+}
+
+/* Core, IE 7- fixes to ensure the content is readable */
+dl.list {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+dl.list {
+  display: block;
+}
+
+dl.list>dt {
+  *float: none;
+  *position: static;
+}
+
+/* List Layout */
+dl.list>dt {
+  width: 170px;
+  margin-right: -170px;
+}
+
+dl.list>dd {
+  margin-left: 180px;
+}
+
+@media all and (min-width:1px) {
+  dl.list>dt {
+    width: 36%;
+    margin-right: -36%;
+  }
+
+  dl.list>dd {
+    margin-left: 38%;
+  }
+}
+
+@media all and (min-width:600px) {
+  dl.list>dt {
+    width: 170px;
+    margin-right: -170px;
+  }
+
+  dl.list>dd {
+    margin-left: 180px;
+  }
+}
+
+/* List Spacing */
+dl.list>dt {
+  margin-bottom: 0px;
+}
+
+dl.list>dd {
+  margin-bottom: 0px;
+}
+
+dl.list>dd+dt {
+  margin-top: 5px;
+}
+
+dl.list>dt+dd {
+  margin-top: 5px;
+}
+
+dl.list dl.list {
+  margin-top: 5px;
+}
+
+dl.list dl {
+  margin-bottom: 0px;
+}
+
+
+/* Errores */
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+
+.container .alert {
+  margin: 10px auto;
+  width: 60%;
+  padding: 10px;
+  position: relative;
+}
+
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}

@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+  .wrapper
+    .container
+
+      article(class="part result-details")  
+        h1 Resultado de la consulta al padrón
+        if (data.personaReturn.errorConstancia)
+          div(class="alert alert-warning")=data.personaReturn.errorConstancia.error ? data.personaReturn.errorConstancia.error : 'Ocurrió un error'
+        else
+          h2 Datos Generales
+          dl.list        
+            dt Id de persona:
+            dd=data.personaReturn.datosGenerales.idPersona
+            dt Estado Clave:
+            dd=data.personaReturn.datosGenerales.estadoClave
+            dt Tipo Persona:
+            dd=data.personaReturn.datosGenerales.tipoPersona
+            if (data.personaReturn.datosGenerales.tipoPersona==="FISICA")
+              dt Apellido:
+              dd=data.personaReturn.datosGenerales.apellido
+              dt Nombre:
+              dd=data.personaReturn.datosGenerales.nombre
+            else 
+              dt Razon Social:
+              dd=data.personaReturn.datosGenerales.razonSocial
+          if (data.personaReturn.datosRegimenGeneral)            
+            h2 Datos del Regimen General
+            dl.list        
+              dt Actividad:
+              if(data.personaReturn.datosRegimenGeneral.actividad.constructor == Array)
+                for actividad in data.personaReturn.datosRegimenGeneral.actividad
+                  dd= '(' + actividad.nomenclador + ') ' + actividad.descripcionActividad
+              else
+                dd= '(' + data.personaReturn.datosRegimenGeneral.actividad.nomenclador + ') ' + data.personaReturn.datosRegimenGeneral.actividad.descripcionActividad
+              dt Impuestos:
+              for impuesto in data.personaReturn.datosRegimenGeneral.impuesto
+                dd=impuesto.descripcionImpuesto
+          if (data.personaReturn.datosMonotributo)
+            h2 Datos del Monotributo
+            dl.list
+              dt Actividad Monotributista:
+              dd= data.personaReturn.datosMonotributo.actividadMonotributista.descripcionActividad
+              dt Categoria Monotributo:
+              dd= data.personaReturn.datosMonotributo.categoriaMonotributo.descripcionCategoria
+
+        a(href='/', class="part") Nueva Consulta
+
+      .part.bg
+

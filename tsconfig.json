@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",    
+    "module": "commonjs",    
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "!src/.baseDir.ts",
+    "**/*.spec.ts"
+  ]
+}

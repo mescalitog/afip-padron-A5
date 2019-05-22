@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  .wrapper
+    .container
+
+      article(class="part article-details")  
+        h1 Consulta AFIP Padron A5 (Constancia de Inscripción)
+        form(method='POST', class="center")
+
+          .group.input-cuit
+            label(for="cuit") Cuit
+            input(type="number" id="cuit" name="cuit" maxlength="20" placeholder="Cuit sin espacios ni guiones")
+
+          .grup.submit-group
+            span
+              .arrow
+            input(type="submit" class="submit" value="Consultar Padrón")
+      .part.bg
+        
