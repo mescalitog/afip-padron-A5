@@ -232,7 +232,6 @@ body {
 
 .wrapper .container .part.bg {
   width: 40%;
-  background-image: url("https://s13.postimg.org/d8emjhccn/image.jpg");
   background-size: 121%;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -386,7 +385,6 @@ body {
   content: '';
   width: 15px;
   height: 15px;
-  background-image: url("https://s21.postimg.org/lgxvam5df/arrow.png");
   position: absolute;
   top: 4px;
   left: 0;

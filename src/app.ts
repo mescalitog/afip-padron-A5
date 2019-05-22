@@ -26,7 +26,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(session({secret: "itstuff.com.ar"}));
+app.use(session({
+  secret: "itstuff.com.ar",
+  resave: false,
+  saveUninitialized: true,
+}));
 app.use(flash());
 
 app.use(
