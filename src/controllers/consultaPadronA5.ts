@@ -10,14 +10,13 @@ interface IPayload {
 export let index: express.RequestHandler = (req: express.Request, res: express.Response) => {
 
   const payload: IPayload = req.body;
-  const DEFAULT_URLWSAAWSDL: string = "https://wsaa.afip.gov.ar/ws/services/LoginCms?WSDL";
 
   const cacheLogin: CacheLogin = CacheLogin.Instance;
   cacheLogin.certificateKey = config.certificateKey;
   cacheLogin.certificatePath = config.certificate;
-  cacheLogin.wsaawsdl = DEFAULT_URLWSAAWSDL;
+  cacheLogin.wsaawsdl = config.urlwsaa;
 
-  const personaServiceA5: PersonaServiceA5 = new PersonaServiceA5("https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5");
+  const personaServiceA5: PersonaServiceA5 = new PersonaServiceA5(config.urlPersonaServiceA5);
 
   personaServiceA5.dummy({})
     .then(r => {
