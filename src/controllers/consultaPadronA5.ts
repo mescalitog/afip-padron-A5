@@ -50,7 +50,7 @@ export let index: express.RequestHandler = (req: express.Request, res: express.R
     })
     .catch(err => {
       console.error(err);
-      req.flash("errors", "Ocurrió un error inesperado accediento a los servicios.");
+      req.flash("errors", "Ocurrió un error inesperado accediendo a los servicios.");
       return res.redirect("/");
     });
 };

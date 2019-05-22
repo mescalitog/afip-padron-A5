@@ -11,7 +11,6 @@ import * as consultaController from "./controllers/consultaPadronA5";
 //
 if (!fs.existsSync(config.certificate) || !fs.existsSync(config.certificateKey)) {
   console.error(`Falta el certificado en ${config.certificate} o la clave en ${config.certificate}`);
-  process.exit(1);
 }
 
 // server Express
