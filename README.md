@@ -1,6 +1,6 @@
 # Demo de consulta de constancia de inscripcion AFIP
 
-[![dependencies Status](https://david-dm.org/mescalitog/afip-padron-A5/status.svg)](https://david-dm.org/mescalitog/afip-padron-A5) [![Build Status](https://travis-ci.com/mescalitog/afip-padron-A5.svg?branch=master)](https://travis-ci.com/mescalitog/afip-padron-A5)
+[![mantanability status](https://api.codeclimate.com/v1/badges/ebdb7a55f904cd9c108f/maintainability)](href="https://codeclimate.com/github/mescalitog/afip-padron-A5/maintainability)[![dependencies Status](https://david-dm.org/mescalitog/afip-padron-A5/status.svg)](https://david-dm.org/mescalitog/afip-padron-A5) [![Build Status](https://travis-ci.com/mescalitog/afip-padron-A5.svg?branch=master)](https://travis-ci.com/mescalitog/afip-padron-A5)
 
 El propósito de este repositorio es mostrar cómo usar el paquete [afip-apis](https://www.npmjs.com/package/afip-apis) en [Node.js](https://nodejs.org/en/) para consultar [constancias de inscripcion](http://www.afip.gob.ar/ws/WSCI/manual-ws-sr-ws-constancia-inscripcion-v3.2.pdf) utilizando el servicio web de [Afip](https://www.afip.gob.ar/ws/), antes llamado de Alcance 5 (ws_sr_padron_a5).
 
