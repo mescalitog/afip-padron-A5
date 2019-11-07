@@ -1,6 +1,6 @@
 {
   "name": "afip-padron-a5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ejemplo de consulta del web service Padron A5 de afip",
   "repository": {
     "type": "git",
@@ -17,26 +17,26 @@
   "author": "José Marfil <jose.marfil@itstuff.com.ar>",
   "license": "MIT",
   "dependencies": {
-    "afip-apis": "^0.3.0",
+    "afip-apis": "^0.3.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-flash": "0.0.2",
-    "express-session": "^1.16.2",
+    "express-session": "^1.17.0",
     "fs": "0.0.1-security",
     "moment": "^2.24.0",
     "path": "^0.12.7",
     "pug": "^2.0.4"
   },
   "devDependencies": {
-    "@types/express": "^4.17.0",
+    "@types/express": "^4.17.2",
     "@types/express-flash": "0.0.0",
-    "@types/express-session": "^1.15.13",
-    "@types/jest": "^24.0.17",
+    "@types/express-session": "^1.15.15",
+    "@types/jest": "^24.0.22",
     "@types/supertest": "^2.0.8",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
   }
 }
