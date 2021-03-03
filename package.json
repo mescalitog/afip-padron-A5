@@ -25,7 +25,7 @@
     "fs": "0.0.1-security",
     "moment": "^2.24.0",
     "path": "^0.12.7",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
