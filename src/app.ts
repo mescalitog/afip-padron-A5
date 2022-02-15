@@ -10,7 +10,7 @@ import * as consultaController from "./controllers/consultaPadronA5";
 
 //
 if (!fs.existsSync(config.certificate) || !fs.existsSync(config.certificateKey)) {
-  console.error(`Falta el certificado en ${config.certificate} o la clave en ${config.certificate}`);
+    console.error(`Falta el certificado en ${config.certificate} o la clave en ${config.certificate}`);
 }
 
 // server Express
@@ -23,17 +23,17 @@ app.set("view engine", "pug");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 app.use(session({
-  secret: "itstuff.com.ar",
-  resave: false,
-  saveUninitialized: true,
+    secret: "itstuff.com.ar",
+    resave: false,
+    saveUninitialized: true,
 }));
 app.use(flash());
 
 app.use(
-  express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
+    express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
 
 // rutas
