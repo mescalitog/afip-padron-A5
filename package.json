@@ -1,6 +1,6 @@
 {
   "name": "afip-padron-a5",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Ejemplo de consulta del web service Padron A5 de afip",
   "repository": {
     "type": "git",
