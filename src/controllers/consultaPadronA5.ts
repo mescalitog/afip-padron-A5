@@ -18,31 +18,26 @@ export const index: express.RequestHandler = (req: express.Request, res: express
         .then(r => {
             if (checkDummyStatus(r)) {
                 return cacheLogin.getTicket(PersonaServiceA5.serviceId)
-                    .then(ticket => {
-                        return dummyCall({ personaServiceA5, ticket, payload, res });
-                    });
+                    .then(ticket => getPersona({ personaServiceA5, ticket, payload, res }));
             } else {
                 return handleNoOperational(r, req, res);
             }
         })
-        .catch(err => {
-            return handleError(err, req, res);
-        });
+        .catch(err => handleError(err, req, res));
 };
 
-function dummyCall({ personaServiceA5, ticket, payload, res }: { personaServiceA5: PersonaServiceA5; ticket: any; payload: IPayload; res: express.Response }): void | PromiseLike<void> {
+function getPersona({ personaServiceA5, ticket, payload, res }: { personaServiceA5: PersonaServiceA5; ticket: any; payload: IPayload; res: express.Response }): void | PromiseLike<void> {
     return personaServiceA5.getPersona({
         token: ticket.credentials.token,
         sign: ticket.credentials.sign,
-        cuitRepresentada: 20220536999,
+        cuitRepresentada: config.cuitRepresentada,
         idPersona: payload.cuit
     })
-        .then(persona => {
-            return res.render("consulta", {
-                title: "Consulta Padron A5",
-                data: persona
-            });
-        });
+        .then(persona => res.render("consulta", {
+            title: "Consulta Padron A5",
+            data: persona
+        }
+        ));
 }
 
 function cacheData() {

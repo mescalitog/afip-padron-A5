@@ -15,7 +15,7 @@ Seguir los pasos en la documentación oficial:
 - [¿Cómo obtener el Certificado Digital para entorno de producción?](http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf)
 - [¿Cómo asociar el Certificado Digital a un WSN (Web Service de Negocio)?](http://www.afip.gob.ar/ws/WSAA/wsaa_asociar_certificado_a_wsn_produccion.pdf)
 - Certificado y autorización en el entorno de homologacion.
-Ingresar con clave fiscal a [www.afip.gob.ar](http://www.afip.gob.ar) 
+Ingresar con clave fiscal a [www.afip.gob.ar](http://www.afip.gob.ar)
 Opcion [WSASS - Autogestión Certificados Homologación](https://wsass-homo.afip.gob.ar/wsass/portal/main.aspx)
 Esta es la opcion para _Autogestión de certificados para Servicios Web en los ambientes de homologación_
 Que permite, obtener los certificados y asociar servicios para probar la API en el entorno de homologación.
@@ -34,7 +34,7 @@ cd <nombre del proyecto>
 npm install
 ```
 - Asociar el certificado y la clave privada.
-En la configuracion podés determinar donde esta el certificado y la clave privada que se usaran para el servicio de autenticación. Las ubicaciones pordefault son "./private/certificate/certificate.crt" para el certificado y "./private/certificate/private.key" para la clave privada, asi que en este punto tenés que copiar el certificado el la clave en esas ubicaciones. 
+En la configuracion podés determinar donde esta el certificado y la clave privada que se usaran para el servicio de autenticación. Las ubicaciones pordefault son "./private/certificate/certificate.crt" para el certificado y "./private/certificate/private.key" para la clave privada, asi que en este punto tenés que copiar el certificado y la clave en esas ubicaciones.
 
 > **Nota** - Sin el certificado o la clave, al iniciar la app va a aparecer este error: `Falta el certificado en ./private/certificate/certificate.crt o la clave en ./private/certificate/certificate.crt`
 
@@ -43,5 +43,5 @@ En la configuracion podés determinar donde esta el certificado y la clave priva
 npm run build
 npm start
 ```
-La app esta disponible para probar en `http://localhost:3000` 
+La app esta disponible para probar en `http://localhost:3000`
 
