@@ -23,7 +23,7 @@
     "express-flash": "0.0.2",
     "express-session": "^1.17.0",
     "fs": "0.0.1-security",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "path": "^0.12.7",
     "pug": "^3.0.1"
   },
