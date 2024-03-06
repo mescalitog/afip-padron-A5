@@ -3,14 +3,16 @@
         "browser": true,
         "es6": true
     },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "tsconfig.json",
+        "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
-        "eslint-plugin-no-null",
-        "eslint-plugin-jsdoc",
         "@typescript-eslint"
     ],
     "rules": {
@@ -47,10 +49,6 @@
             "1tbs"
         ],
         "indent": "error",
-        "jsdoc/check-alignment": "error",
-        "jsdoc/check-indentation": "error",
-        "jsdoc/newline-after-description": "error",
-        "no-null/no-null": "error",
         "no-trailing-spaces": "error",
         "no-var": "error",
         "prefer-const": "error",

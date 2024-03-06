@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as express from "express";
 import { CacheLogin } from "./../cache-login";
 import { PersonaServiceA5 } from "afip-apis";

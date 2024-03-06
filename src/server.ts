@@ -1,6 +1,6 @@
 import app from "./app";
 
-const server: any = app.listen(app.get("port"), () => {
+const server: unknown = app.listen(app.get("port"), () => {
     console.log(
         "  la aplicacion se ejecutra en http://localhost:%d en modo %s",
         app.get("port"),

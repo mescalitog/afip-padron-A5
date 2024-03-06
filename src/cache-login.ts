@@ -1,12 +1,12 @@
+import { ILoginTicketResponse, LoginTicket } from "afip-apis";
 import * as fs from "fs";
-import { LoginTicket, ILoginTicketResponse } from "afip-apis";
 import moment from "moment";
 import * as path from "path";
 
-const DEFAULT_CERTIFICATE: string = "./private/certificate/certificate.crt";
-const DEFAULT_CERTIFICATE_KEY: string = "./private/certificate/private.key";
-const DEFAULT_URLWSAAWSDL: string = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms?WSDL";
-const TICKET_PATH: string = "./cache/";
+const DEFAULT_CERTIFICATE = "./private/certificate/certificate.crt";
+const DEFAULT_CERTIFICATE_KEY = "./private/certificate/private.key";
+const DEFAULT_URLWSAAWSDL = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms?WSDL";
+const TICKET_PATH = "./cache/";
 
 export class CacheLogin {
     private static _instance: CacheLogin;
@@ -76,8 +76,7 @@ export class CacheLogin {
      */
     public getTicket = (serviceId: string): Promise<ILoginTicketResponse> => {
         let ticket = this._tickets[serviceId];
-        const now = new Date();
-        const promise = new Promise<ILoginTicketResponse>((resolve: Function, reject: Function) => {
+        const promise = new Promise<ILoginTicketResponse>((resolve, reject) => {
             // Memoria
             if (ticket && moment(ticket.header.expirationTime).isSameOrAfter(moment())) {
                 return resolve(ticket);
@@ -89,6 +88,7 @@ export class CacheLogin {
                     const s = fs.readFileSync(`${TICKET_PATH}${serviceId}-ticket.json`, "utf8");
                     ticket = JSON.parse(s);
                 } catch (err) {
+                    console.error(err);
                 }
             }
             if (ticket && moment(ticket.header.expirationTime).isSameOrAfter(moment())) {
